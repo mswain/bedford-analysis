@@ -16,5 +16,4 @@ COPY app ./app
 # Install Gunicorn
 RUN pip install gunicorn
 
-# Set the entrypoint command to run the Flask app using Gunicorn
-ENTRYPOINT ["gunicorn", "-b", "0.0.0.0:8000", "app:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:8000", "wsgi:app"]
