@@ -1,0 +1,11 @@
+services:
+  web:
+    build:
+      context: .
+      target: production
+    ports:
+      - '8000:8000'
+    volumes:
+      - ./app:/app 
+    env_file:
+      - .env
